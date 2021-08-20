@@ -115,6 +115,9 @@ class ChartViewController: UIViewController {
     @IBAction func tappedConfiguretionButton(_ sender: Any) {
         weightModel.sendTargetWeightToFirestore(userUid: userUid, textField: setTargetWeightTextField)
         weightModel.loadTargetWeight(userUid: userUid)
+        setTargetWeightTextField.text = ""
+        setTargetWeightTextField.isEnabled = false
+        setTargetWeightTextField.backgroundColor = UIColor.rgb(red: 169, green: 169, blue: 169)
     }
 }
 
